@@ -1,14 +1,30 @@
 // for making server
 const express=require("express");
-const { connection } = require("./config/db");
 const app=express();
 
+// connection 
+const { connection } = require("./config/db");
 
+// router for users
+const { userRouter } = require("./routes/userRouter");
+
+// router for quizes
+const { quizRouter } = require("./routes/quizRouter");
+
+// for getting invironment variale
 require("dotenv").config();
 
+// middleware
+app.use(express.json());
+
+// for users
+app.use("/user",userRouter)
+
+// for quiz
+app.use("/quiz",quizRouter)
 
 //listening server
-app.listen(process.env.port,async(req,res)=>{
+app.listen(process.env.port,async()=>{
     try {
         await connection;
         console.log("Connected to DB")
