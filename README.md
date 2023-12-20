@@ -2,7 +2,7 @@
   #### The Quiz Application is an interactive platform for seamless quiz creation and participation. With robust authentication, automated status updates, and thoughtful rate limiting, it offers an engaging experience. Ideal for educators, businesses, and quiz enthusiasts, it fosters dynamic learning and knowledge sharing in a secure and user-friendly environment.
 
 ## Table of Contents
- * [Authentication](#atuhentication)
+ * [Authentication](#authentication)
 
  * [Rate Limiting](#rate-limiting)
  * [User Routes](#user-routes)
@@ -21,7 +21,7 @@
 
  * [Job Schedulings](#job-scheduling)
 
- *[Deployment](#deployment-link)
+ * [Deployment](#deployment-link)
 
 ## Authentication
 To access certain endpoints, you need to include a valid JSON Web Token (JWT) in the Authorization header of your requests. The token can be obtained by logging in using the Login User endpoint.
