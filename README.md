@@ -21,6 +21,8 @@
 
  * [Job Schedulings](#job-scheduling)
 
+ *[Deployment](#deployment-link)
+
 ## Authentication
 To access certain endpoints, you need to include a valid JSON Web Token (JWT) in the Authorization header of your requests. The token can be obtained by logging in using the Login User endpoint.
 
@@ -111,7 +113,14 @@ For security reasons, the API enforces rate limiting. This means that a client i
             "endDate": "2023-01-02T00:00:00Z",
             "status": "active"
         },
-        // Additional active quizzes...
+         {
+            "question": "What is the capital of France?",
+            "option": ["Berlin", "Paris", "London"],
+            "rightAnswer": "Paris",
+            "startDate": "2023-01-01T00:00:00Z",
+            "endDate": "2023-01-02T00:00:00Z",
+            "status": "active"
+        },
         ]
  * Error Response (if there are no active quizzes):
 
@@ -168,3 +177,8 @@ Error Response (if rate limit exceeded):
 ## Job Scheduling
  * Purpose: Updates the status of quizzes based on their start and end dates.
  * Response: This is a background job that runs periodically and doesn't provide direct responses.
+
+
+ ### Deployment Link
+  
+    [Link](https://kind-pink-caridea-cape.cyclic.app/)
