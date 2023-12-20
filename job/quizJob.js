@@ -4,8 +4,6 @@ const {quizModal}=require("../modals/quizModal")
 
 const scheduler=async()=>{
 
-// scheduling jobs
-cron.schedule('* * * * *',async()=>{
     try {
         const quizzes=await quizModal.find();
         const now = new Date();
@@ -31,8 +29,9 @@ cron.schedule('* * * * *',async()=>{
         console.log(error)
     }
   
-})
 }
+// scheduling jobs
+cron.schedule('*/5  * * * *',scheduler)
 
 
 module.exports={scheduler}

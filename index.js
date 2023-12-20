@@ -15,7 +15,7 @@ const { limiter } = require("./rateLimiter");
 // for getting invironment variale
 require("dotenv").config();
 
-const quizscheduler=require("./job/quizJob")
+const {scheduler}=require("./job/quizJob")
 
 // middleware
 app.use(express.json());
@@ -25,7 +25,7 @@ app.use(express.json());
 app.use(limiter)
 
 // job schedule for status
-quizscheduler.scheduler();
+scheduler();
 // for users
 app.use("/user",userRouter)
 
