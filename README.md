@@ -180,5 +180,4 @@ Error Response (if rate limit exceeded):
 
 
  ### Deployment Link
-  
-    [Link](https://kind-pink-caridea-cape.cyclic.app/)
+  [Link](https://kind-pink-caridea-cape.cyclic.app/)
